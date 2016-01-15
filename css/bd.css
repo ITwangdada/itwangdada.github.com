@@ -1,19 +1,52 @@
-.c1{ height: 640px;}
-.tit{ font-size: 30px;  line-height: 60px;font-family: '微软雅黑'; color: #FF1493;}
-.design li{ width: 177px; height: 206px; border:1px solid #FF1493; margin-right: 14px; margin-top: 20px; }
-.design li a{margin-left: 6px; margin-top: 8px; display: block; overflow: hidden; height: 155px; width: 164px;}
-.design li img{ width:expression(this.width>170&&this.width>this.height?155:true); height: expression(this.height>155?155:true); vertical-align:middle; max-width:164px; max-height:155px;transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out;-o-transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;}
-.design li a:hover img{transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-webkit-transform:scale(1.2);}
-.design li h2{ color:#FF1493; font-family: '微软雅黑'; font-size: 15px; padding-left: 7px; margin-top: 16px; }
-.about{ height: 640px;background:	#2d2d35; text-align: center;}
-.aboutme { width: 900px;margin: 150px auto;}
-.aboutme li{ border-radius: 50%; width: 200px; overflow: hidden;  margin-right: 20px; height: 200px; position: relative; }
-.aboutme li a{ display: inline-block;}
-.aboutme li span{ width: 200px; border-radius: 50%; height: 200px; font-size: 30px; line-height: 200px; background: #000; opacity: 0.5; position: absolute; left: -200px; top: 0;}
-.aboutme li img{ width: 200px; height: 200px; background:#FF1493; border-radius: 50%;}
+.c1{ height: 640px;text-align: center;}
+.tit{ font-size: 40px; color: #444444; background: -webkit-linear-gradient(top,#415266,#9eaad4); padding-top: 20px;padding-bottom: 20px; text-shadow: 0 0 2px #fff; line-height: 50px;font-family: '黑体'; text-align: center; font-weight: bold;}
+.c1_bj{ height: 100%; width: 100%; background: url("../img/banner1.jpg") no-repeat; background-size: cover; }
+.cont{ width: 100%; }
+.design{ width:100%;display: -webkit-box; height: 205px;  }
+.design li{ font-family: '微软雅黑';  overflow: hidden;  -webkit-box-flex: 1; box-sizing: border-box; border: 1px solid rgba(0,0,0,.5);}
+.design li a{
+    width: 324px;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+    background: rgba(0,0,0,.4);
+    display: block; text-align: center;
+    line-height: 210px; font-size: 15px; text-shadow: 0 0 4px #000; color: #fff;}
+.design li a:hover{
+    background: rgba(0,0,0,.5);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+.about{ height: 640px; text-align: center;}
+#box{ width:645px; margin:0 auto; padding-top: 60px; text-align:center; overflow:hidden; font-size:20px;}
+#box img{ width:270px; height:129px;}
+#t1{ width:540px; height:36px; line-height:36px; outline:none; text-indent:6px; font-size:20px;}
+.s_btn {
+    outline:none;
+    width: 100px;
+    height: 40px;
+    float:right;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgb(51, 133, 255);
+    border-bottom: 1px solid rgb(45, 120, 244);
+    -webkit-appearance: none;
+    border:none;
+    -webkit-border-radius: 0;
+    margin-left:1px;
+    cursor:pointer;
+}
+#box ul{ width:542px; border:1px solid #ccc; border-top:none; text-align:left; text-indent:6px; display:none;}
+#box ul li{ height:30px; line-height:30px; cursor:default;}
+#box ul li.active{ background:#f0f0f0;}
 .contact { position: relative; height: 640px; background: #2d2d35}
-.cont{ font-size: 14px; margin-top: 20px; color:#FF1493}
-.tit2{ padding-top: 50px;}
+.cont{ font-size: 14px; color:#FF1493}
 .tell{ background: url(../img/tel.png) no-repeat;width: 19px; height: 29px; display: block;}
 .contact ol{ margin-top: 200px}
 .contact ol li span{ margin-top: 30px; color: #fff; margin-right: 50px; font-size: 15px}

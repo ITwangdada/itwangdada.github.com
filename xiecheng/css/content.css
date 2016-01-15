@@ -1,0 +1,310 @@
+.search_box{
+    width:100%;
+    height: 45px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7px 50px 7px 8px;
+    background: #F6F6F6;
+}
+.search{
+    background: #fff;
+    height: 24px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    color: #666;
+    font-size: 0.86em;
+    line-height: 24px;
+    overflow: hidden;
+}
+.search span{
+    white-space:normal;
+    padding-left: 20px;
+}
+.my{
+    width: 44px;
+    height: 26px;
+    position: absolute;
+    top: 4px;
+    right: -10px;
+    background: url(../image/xbt.png) no-repeat;
+    background-position: -59px -193px;
+    background-size: 104px 326px;
+}
+.my span{
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    text-align: center;
+    color: #2EAAE0;
+    font-size: 0.86em;
+}
+header{
+    margin-top: 45px;
+    width: 100%;
+    position: relative;
+    min-height: 64px;
+    overflow: hidden;
+    background: #F2F2F2;
+    display: block;
+    height: 116px;
+}
+header .tab{
+    height: 116px;
+    width: 4000px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    -ms-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+    position: absolute;
+}
+.tab li{
+    position: relative;
+    height: 116px;
+    float: left;
+}
+.tab li img{
+    width: 100%;
+    display: block;
+    position: relative;
+    height: 100%;
+}
+.tab_btn{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 10;
+    width: 100px;
+    margin-left: -20px;
+}
+.tab_btn span{
+    width:8px;
+    height: 8px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    background: rgba(255,255,255, .6);
+    margin: 0 5px;
+}
+.tab_btn span.active{
+    background: rgba(255,255,255,1);
+}
+nav{
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.row {
+    box-sizing:border-box;
+    margin-bottom: 5px;
+    height: 6em;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+}
+.col{
+    -webkit-box-flex: 1;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.col .jd{
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.col span{
+    width: 40px;
+    height: 33px;
+    margin-left: -20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    background: url("../image/xbt.png") no-repeat;
+    background-position: 0 -128px;
+    background-size:104px 326px ;
+ }
+.col a{
+    background: #ff697a;
+    position: relative;
+    display: block;
+    font-size: 1em;
+    color: #fff;
+    text-shadow:0 2px 1px rgba(0,0,0,.2);
+    text-align: center;
+    line-height: 3em;
+    box-sizing: border-box;
+    overflow: hidden;
+    height:calc(50% - 0.5px) ;
+}
+.col i{
+    height: 1px;
+    width: 100%;
+    display: block;
+    background: #fff;
+}
+.col.tg{
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+nav .row:nth-child(2) .col a{
+    background-color:#3d98ff;
+}
+nav .row:nth-child(3) .col a{
+    background-color:#44c522;
+}
+nav .row:nth-child(4) .col a{
+    background-color:#fc9720;
+}
+.col span.fj{
+    width: 43px;
+    height: 28px;
+    margin-left: -23px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    background: url("../image/xbt.png") no-repeat;
+    background-position: -50px -120px;
+    background-size:104px 326px ;
+}
+.col span.ly{
+    width: 35px;
+    height: 43px;
+    margin-left: -18px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    background: url("../image/xbt.png") no-repeat;
+    background-position: 0px -180px;
+    background-size:104px 326px ;
+}
+.col.mp{
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+.pic-banner{
+    margin: 0 5px 5px 5px ;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pic-banner ul{
+    display: table;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.pic-banner li:first-child{
+    border-right: 1px solid #d8d8d8;
+}
+.pic-banner li{
+    width: 50%;
+    box-sizing: border-box;
+    display: table-cell;
+}
+.pic-banner li img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    min-height: 59px;
+    vertical-align: middle;
+}
+.tool-box{
+    padding-bottom: 5px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+
+}
+.tool-cn{
+    margin-bottom: 5px;
+    height: 3.57em;
+    background: #fff;
+    border-bottom: 1px solid #c2c2c2;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+}
+.tool-cn a{
+    -webkit-box-flex: 1;
+    color: #333;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 26px;
+    position: relative;
+    display: block;
+
+}
+
+.tool-cn a span{
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    margin-left: -8px;
+    display: block;
+    background: url("../image/xbt.png") -60px -153px no-repeat;
+    background-size: 104px 326px;
+    width: 16px;
+    height: 17px;
+}
+.tool-cn a span.xz{
+    background-position:-60px -173px ;
+}
+.tool-cn a span.wd{
+    margin-left: -9px;
+    width: 18px;
+    height: 19px;
+    background-position:-60px -308px;
+}
+.tool-ver{
+    color: #999;
+    width: 100%;
+}
+.tool-ver a{
+    text-align: center;
+    color: #666600;
+    font-size: 12px;
+}
+.tool-box p{
+    color: #999;
+    font-size: 12px;
+    padding:5px 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head lang=en><meta charset=UTF-8><title></title><style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-style:normal;
+        }
+        body,html{
+            height: 100%;
+            overflow: hidden;
+        }
+        .box{
+            margin:auto;
+            width: 600px;
+            height: 100%;
+            background: -webkit-linear-gradient(top left,#c64b8a,#3a1528);
+            overflow: hidden;
+        }
+        .top{
+            border-radius: 5px;
+            background: #cc0060;
+            width: 300px;
+            height: 150px;
+            box-shadow: 2px 5px 10px #000;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .top h3{
+            background: url("img/music.png") no-repeat;
+            width: 102px;
+            height: 100px;
+            margin: 20px 0 0 10px;
+        }
+        .play{
+            margin-left: 45px;
+            background: url("img/play.png") no-repeat;
+        }
+        .next{
+            margin-left: 100px;
+            background: url("img/next.png") no-repeat;
+        }
+        .perv{
+            margin-left: -10px;
+            background: url("img/prev.png") no-repeat;
+        }
+        .top span{
+            cursor: pointer;
+            background-size:cover;
+            left: 50%;
+            bottom: 28px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+        }
+        .text{
+            text-align: center;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            color: #fff;
+            text-shadow: 0 2px 5px #000;
+
+            margin-left: 20px;
+        }
+        .text p{
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .text em{
+            font-size: 15px;
+        }
+        .content{
+            box-shadow: 2px 2px 5px #000;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 300px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .content ol{
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .content ol li{
+            cursor: pointer;
+            border-bottom: 1px dashed #ccc;
+            margin-top: 20px;
+            list-style: none;
+            overflow: hidden;
+            padding-bottom: 5px;
+        }
+        .content ol li span{
+            margin-left: 5px;
+            float: left;
+            background: url("img/music2.png") no-repeat;
+            width: 34px;
+            height: 30px;
+            background-size: cover;
+            margin-right: 10px;
+        }
+    </style><script>
+        window.onload=function(){
+            var arrSong=[1,2,3,4,5,6];
+            var oA=document.querySelector('#a1');
+            var oPlay=document.querySelector('#play');
+            var aLi=document.querySelectorAll('.content ol li');
+            var bPlay=true;
+            var oPerv=document.querySelector('#perv');
+            var oNext=document.querySelector('#next');
+
+            var oP=document.querySelector('.text p');
+            var oEm=document.querySelector('.text em');
+            var iNow=0;
+            var str='';
+
+            //阻止选中文字
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].onmousedown=function(){
+                    return false;
+                };
+            }
+            oPlay.onclick=function(){
+                if(bPlay){
+                    oA.play();
+                    oPlay.style.background='url("img/pause.png") no-repeat';
+                    oPlay.style.backgroundSize='cover';
+                    bPlay=false;
+                }else{
+                    oA.pause();
+                    oPlay.style.background='url("img/play.png") no-repeat';
+                    oPlay.style.backgroundSize='cover';
+                    bPlay=true;
+                }
+            };
+            for(var i=0;i<aLi.length;i++){
+
+                (function(index){
+                    aLi[i].ondblclick=function(){
+                        iNow=index;
+                        play(iNow);
+                    };
+                    //上一首
+                    oPerv.onclick=function(){
+                        iNow--;
+                        if(iNow<0){
+                            iNow=aLi.length-1;
+                        }
+                        play(iNow);
+                    };
+                    //下一曲
+                    oNext.onclick=function(){
+                        iNow++;
+                        if(iNow==aLi.length){
+                            iNow=0;
+                        }
+                        play(iNow);
+                    };
+                })(i);
+            }
+
+            function play(n){
+                oPlay.style.background='url("img/pause.png") no-repeat';
+                oPlay.style.backgroundSize='cover';
+                oA.src='audio/'+arrSong[n]+'.mp3';
+                str=aLi[iNow].children[1].innerHTML;
+                oP.innerHTML=str.substring(2,str.lastIndexOf('-'));
+                oEm.innerHTML=str.substring(str.lastIndexOf('-')+1);
+                oA.play();
+            }
+        };
+    </script></head><body><audio src=audio/1.mp3 id=a1></audio><div class=box><div class=top><h3></h3><div class=text><p>Whistle</p><em>Flo Rida</em></div><span class=play id=play></span> <span class=perv id=perv></span> <span class=next id=next></span></div><div class=content><ol><li><span></span><p>1.Whistle-Flo Rida</p></li><li><span></span><p>2.零时零分-容祖儿</p></li><li><span></span><p>3.Pomplamoose-Mister</p></li><li><span></span><p>4.Babyface-Mad</p></li><li><span></span><p>5.keri Hilson-Energy</p></li><li><span></span><p>6.Kim Gloss-Chatline</p></li></ol></div></div></body></html>

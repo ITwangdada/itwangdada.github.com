@@ -1,0 +1,35 @@
+/* CSS Document */
+
+/* qk_footer */
+.rqy_footer{height:328px;border-top:3px solid #3aa2a2;background:#f6f6f6;}
+.rqy_footer_top{width:980px;margin:0 auto;}
+.rqy_footer_top dl{float:left;border-left:1px dotted #a5a5a5;width:187px;height:180px;}
+.rqy_footer_top dl dt{width:100px;margin:25px 0 0 25px;font-size:14px;font-weight:bold;color:#3e4545;}
+.rqy_footer_top dl dd{height:12px;width:110px;margin:10px 0 0 30px;}
+.rqy_footer_top dl .first_dd{margin-top:16px;}
+.rqy_footer_top dl dd span{float:left;}
+.rqy_footer_top dl dd .heidian{width:6px;height:6px;margin-right:7px;background:url(../img/qk_footer2.png);margin-top:3px;}
+
+.rqy_footer_top .rqy_footer_top_dl5{width:226px;border-right:1px dotted #a5a5a5;}
+.rqy_footer_top .rqy_footer_top_dl5 dt{width:52px;height:48px;margin:21px 0 0 86px;background:url(../img/qk_footer1.png);}
+.rqy_footer_top .rqy_footer_top_dl5 dd{width:160px;margin:7px 0 0 24px;color:#666;}
+.rqy_footer_top .rqy_footer_top_dl5 .gaoding{color:#2bb8aa;}
+.rqy_footer_top .rqy_footer_top_dl5 .dl5_dd{margin-top:20px;}
+
+.rqy_footer_top .rqy_footer_top_dl5 .dd_num{margin-top:22px;}
+
+.rqy_footer_cen{width:510px;margin:0 auto;margin-top:30px;}
+.rqy_footer_cen span{color:#999;}
+
+
+
+.rqy_footer_btn{width:620px;margin:0 auto;margin-top:24px;}
+.rqy_footer_btnbox{margin-left:-14px;width:620px;}
+.rqy_footer_btnbox div{margin-left:14px;float:left;}
+.rqy_footer_btnbox .iconbox1{width:111px;height:40px;}
+.rqy_footer_btnbox .iconbox2{width:123px;height:40px;}
+.rqy_footer_btnbox .iconbox3{width:87px;height:40px;}
+.rqy_footer_btnbox .iconbox4{width:113px;height:40px;}
+.rqy_footer_btnbox .iconbox5{width:111px;height:40px;}
+
+

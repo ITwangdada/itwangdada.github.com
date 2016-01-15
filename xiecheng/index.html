@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <meta name="apple-mobile-web-app-title" content="携程旅游"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="telephone=noe" name="format-detection"/>
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/content.css"/>
+    <script>
+        window.onload=window.onresize=function(){
+            var aLi=document.querySelectorAll('.tab li');
+            var oUl=document.querySelector('.tab');
+            var oHead=document.querySelector('header');
+            var aSpan=document.querySelectorAll('.tab_btn span');
+            //宽度高度
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].style.width=document.documentElement.clientWidth+'px';
+                oUl.style.width=document.documentElement.clientWidth*aLi.length+'px';
+                var h=0.22*aLi[0].offsetWidth;
+                if(h <= 64){
+                    h=64;
+                    return false;
+                }
+                oUl.style.height=h+'px';
+                aLi[i].style.height=h+'px';
+                oHead.style.height=h+'px';
+
+            }
+
+            //选项卡
+            for(var i=0;i<aSpan.length;i++){
+                (function(index){
+                    aSpan[i].onclick=function(){
+                        for(var i=0;i<aSpan.length;i++){
+                            aSpan[i].className='';
+                        }
+                        aSpan[index].className='active';
+                        oUl.style.WebkitTransform='translate('+-aLi[0].offsetWidth*index+'px, 0px)';
+                        oUl.style.MozTransform='translate('+-aLi[0].offsetWidth*index+'px, 0px)';
+                        oUl.style.msTransform='translate('+-aLi[0].offsetWidth*index+'px, 0px)';
+                        oUl.style.OTransform='translate('+-aLi[0].offsetWidth*index+'px, 0px)';
+                        oUl.style.transform='translate('+-aLi[0].offsetWidth*index+'px, 0px)';
+                    };
+                })(i);
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="search_box">
+            <div class="search">
+                <span>搜索:目的地/酒店/景点/航班号</span>
+            </div>
+            <a href="javascript:;" class="my">
+                <span>
+                    我的
+                </span>
+            </a>
+        </div>
+        <header>
+            <ul class="tab clearFix">
+                <li><a href="javascript:;"><img src="image/app_ad16_1536_307.jpg" alt="1"/></a></li>
+                <li><a href="javascript:;"><img src="image/app_home_ad2601_1536_307.jpg" alt="2"/></a></li>
+                <li><a href="javascript:;"><img src="image/app_home_ad52_1536_307.jpg" alt="3"/></a></li>
+                <li><a href="javascript:;"><img src="image/app_ad16_1536_307.jpg" alt="4"/></a></li>
+                <li><a href="javascript:;"><img src="image/app_home_ad2601_1536_307.jpg" alt="5"/></a></li>
+            </ul>
+            <div class="tab_btn clearFix">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <nav>
+            <div class="row">
+                <div class="col">
+                    <a href="javascript:;" class="jd">酒店</a>
+                    <span></span>
+                </div>
+                <div class="col">
+                    <a href="javascript:;">海外酒店</a>
+                    <i></i>
+                    <a href="javascript:;">特惠酒店</a>
+                </div>
+                <div class="col tg">
+                    <a href="javascript:;">团购</a>
+                    <i></i>
+                    <a href="javascript:;">客栈·公寓</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="javascript:;" class="jd">机票</a>
+                    <span class="fj"></span>
+                </div>
+                <div class="col">
+                    <a href="javascript:;">火车票</a>
+                    <i></i>
+                    <a href="javascript:;">国际机票</a>
+                </div>
+                <div class="col tg">
+                    <a href="javascript:;">汽车票·船票</a>
+                    <i></i>
+                    <a href="javascript:;">自驾·专车</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="javascript:;" class="jd">旅游</a>
+                    <span class="ly"></span>
+                </div>
+                <div class="col">
+                    <a href="javascript:;">攻略·身边</a>
+                    <i></i>
+                    <a href="javascript:;">周末游</a>
+                </div>
+                <div class="col tg">
+                    <a href="javascript:;">邮轮</a>
+                    <i></i>
+                    <a href="javascript:;">保险·签证</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mp">
+                    <a href="javascript:;">门票·玩乐</a>
+                    <i></i>
+                    <a href="javascript:;">礼品卡</a>
+                </div>
+                <div class="col">
+                    <a href="javascript:;">美食</a>
+                    <i></i>
+                    <a href="javascript:;">出境WiFi</a>
+                </div>
+                <div class="col tg">
+                    <a href="javascript:;">全球购</a>
+                    <i></i>
+                    <a href="javascript:;">更多</a>
+                </div>
+            </div>
+        </nav>
+        <div class="pic-banner">
+            <ul>
+                <li>
+                    <img src="image/zzz_pic_salead01.png" alt=""/>
+                </li>
+                <li>
+                    <img src="image/zzz_pic_salead02.png" alt=""/>
+                </li>
+            </ul>
+        </div>
+        <footer class="tool-box">
+            <div class="tool-cn">
+                <a href="javascript:;">
+                    <span></span>
+                    电话预定
+                </a>
+                <a href="javascript:;">
+                    <span class="xz"></span>
+                    客户端下载
+                </a>
+                <a href="javascript:;">
+                    <span class="wd"></span>
+                    我 的
+                </a>
+            </div>
+            <div class="tool-ver">
+                <a href="javascript:;">网站地图 | </a>
+                <a href="javascript:;">ENGLISH | </a>
+                <a href="javascript:;">电脑版</a>
+            </div>
+            <p>©2016 携程旅行</p>
+        </footer>
+    </div>
+</body>
+</html>

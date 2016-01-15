@@ -1,0 +1,15 @@
+body{
+    font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+    min-width: 320px;
+    display: block;
+    height: 100%;
+}
+*{ padding:0; margin:0; line-height:100%;}
+ul,ol{ list-style:none;}
+a{ color:#ccc; text-decoration:none;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+a img{ border:none;}
+.clearFix:after{ display:block; content:''; clear:both; zoom:1;}
+.fl{ float:left;}
+.fr{ float:right;}
