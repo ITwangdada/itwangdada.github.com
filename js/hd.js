@@ -9,9 +9,13 @@
 			var oDiv=document.getElementById('swi');
 			oBtn.onclick=function(){
 				oBtn.style.WebkitTransition='.5s all ease';
+				oBtn.style.msTransition='.5s all ease';
 				oBtn.style.WebkitTransform='scale(5)';
+				oBtn.style.msTransform='scale(5)';
 				oBtn.style.MozTransition='.5s all ease';
 				oBtn.style.MozTransform='scale(5)';
+				oBtn.style.OTransition='.5s all ease';
+				oBtn.style.OTransform='scale(5)';
 				oBtn.style.opacity=0;
 				function tEnd(){
 					oBtn.style.display='none';
@@ -19,6 +23,8 @@
 					oDiv.style.WebkitFilter='blur(0px)';
 					oDiv.style.filter='blur(0px)';
 					oDiv.style.MozkitFilter='blur(0px)';
+					oDiv.style.OFilter='blur(0px)';
+					oDiv.style.msFilter='blur(0px)';
 					//立方体
 					;(function(){
 						var oDiv=document.querySelector('.box-3d');
@@ -30,6 +36,8 @@
 							x-=1;
 							oDiv.style.WebkitTransform='perspective(800px) rotateX('+x+'deg) rotateY(-'+y+'deg)';
 							oDiv.style.MozTransform='perspective(800px) rotateX('+x+'deg) rotateY(-'+y+'deg)';
+							oDiv.style.msTransform='perspective(800px) rotateX('+x+'deg) rotateY(-'+y+'deg)';
+							oDiv.style.OTransform='perspective(800px) rotateX('+x+'deg) rotateY(-'+y+'deg)';
 						},30);
 					})();
 					oBtn.removeEventListener('transitionend',tEnd,false);
@@ -39,8 +47,16 @@
 			oBtn.onmouseover=function(){
 				oBtn.style.opacity=1;
 				oBtn.style.boxShadow='0 0 0 5px rgba(255,255,255,0.5),0 0 0 10px rgba(255,255,255,.5)';
+				oBtn.style.WebkitBoxShadow='0 0 0 5px rgba(255,255,255,0.5),0 0 0 10px rgba(255,255,255,.5)';
+				oBtn.style.MozBoxShadow='0 0 0 5px rgba(255,255,255,0.5),0 0 0 10px rgba(255,255,255,.5)';
+				oBtn.style.msBoxShadow='0 0 0 5px rgba(255,255,255,0.5),0 0 0 10px rgba(255,255,255,.5)';
+				oBtn.style.OBoxShadow='0 0 0 5px rgba(255,255,255,0.5),0 0 0 10px rgba(255,255,255,.5)';
 				function oEnd(){
 					oBtn.style.boxShadow=' 0 0 0 5px rgba(255,255,255,.5),0 0 0 0 rgba(255,255,255,0)';
+					oBtn.style.WebkitBoxShadow=' 0 0 0 5px rgba(255,255,255,.5),0 0 0 0 rgba(255,255,255,0)';
+					oBtn.style.MozBoxShadow=' 0 0 0 5px rgba(255,255,255,.5),0 0 0 0 rgba(255,255,255,0)';
+					oBtn.style.msBoxShadow=' 0 0 0 5px rgba(255,255,255,.5),0 0 0 0 rgba(255,255,255,0)';
+					oBtn.style.OBoxShadow=' 0 0 0 5px rgba(255,255,255,.5),0 0 0 0 rgba(255,255,255,0)';
 					oBtn.removeEventListener('transitionend',oEnd,false);
 				}
 				oBtn.addEventListener('transitionend',oEnd,false);
@@ -48,6 +64,10 @@
 			oBtn.onmouseout=function(){
 				oBtn.style.opacity=0.5;
 				oBtn.style.boxShadow='0 0 0 5px rgba(255,255,255,.6),0 0 0 15px rgba(255,255,255,.3)';
+				oBtn.style.WebkitBoxShadow='0 0 0 5px rgba(255,255,255,.6),0 0 0 15px rgba(255,255,255,.3)';
+				oBtn.style.MozBoxShadow='0 0 0 5px rgba(255,255,255,.6),0 0 0 15px rgba(255,255,255,.3)';
+				oBtn.style.msBoxShadow='0 0 0 5px rgba(255,255,255,.6),0 0 0 15px rgba(255,255,255,.3)';
+				oBtn.style.OBoxShadow='0 0 0 5px rgba(255,255,255,.6),0 0 0 15px rgba(255,255,255,.3)';
 				function tEnd(){
 					oBtn.style.boxShadow=' 0 0 0 20px rgba(0,0,0,0),0 0 0 25px rgba(255,255,255,0)';
 					oBtn.removeEventListener('transitionend',tEnd,false);

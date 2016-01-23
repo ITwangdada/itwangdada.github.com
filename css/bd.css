@@ -2,22 +2,35 @@
 .tit{ font-size: 40px; color: #444444; background: -webkit-linear-gradient(top,#415266,#9eaad4);
     background: -moz-linear-gradient(top,#415266,#9eaad4);
     background: -ms-linear-gradient(top,#415266,#9eaad4);
+    background: -o-linear-gradient(top,#415266,#9eaad4);
     padding-top: 20px;padding-bottom: 20px;
     text-shadow: 0 0 2px #fff; line-height: 50px;font-family: '黑体'; text-align: center; font-weight: bold;}
 .c1_bj{ height: 100%; width: 100%; background: url("../img/banner1.jpg") no-repeat; background-size: cover; }
 .cont{ width: 100%; }
-.design{ width:100%;display: -webkit-box; display: -moz-box; height: 205px;  }
-.design li{ font-family: '微软雅黑';  overflow: hidden;  -webkit-box-flex: 1; -moz-box-flex: 1; box-sizing: border-box; border: 1px solid rgba(0,0,0,.5);}
+.design{ width:100%;display: -webkit-box; display: -moz-box; display: -ms-flexbox; height: 205px;  }
+.design li{ font-family: '微软雅黑';  overflow: hidden;  -webkit-box-flex: 1;-ms-box-flex:1; -moz-box-flex: 1; box-sizing: border-box; -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;border: 1px solid rgba(0,0,0,.5);
+    text-align: center;
+}
 .design li a{
-    width: 324px;
+    height: 205px;
     -webkit-transition: .4s all ease;
     -moz-transition: .4s all ease;
     -ms-transition: .4s all ease;
     -o-transition: .4s all ease;
     transition: .4s all ease;
     background: rgba(0,0,0,.4);
-    display: block; text-align: center;
-    line-height: 203px; font-size: 15px; text-shadow: 0 0 4px #000; color: #fff;}
+    display: block;
+    text-align: center;
+    font-size: 15px; text-shadow: 0 0 4px #000; color: #fff;}
+.design li a p{
+    width: 100px;
+    margin: 0 auto;
+    line-height: 205px;
+    height: 100%;
+}
 .design li a:hover{
     background: rgba(0,0,0,.5);
     -webkit-transform: scale(2);
@@ -41,11 +54,18 @@
     background: rgb(51, 133, 255);
     border-bottom: 1px solid rgb(45, 120, 244);
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     border:none;
     -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
     margin-left:1px;
     cursor:pointer;
 }
+#box{ height: 640px;}
 #box ul{ width:542px; border:1px solid #ccc; border-top:none; text-align:left; text-indent:6px; display:none;}
 #box ul li{ height:30px; line-height:30px; cursor:default;}
 #box ul li.active{ background:#f0f0f0;}
