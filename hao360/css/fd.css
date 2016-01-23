@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+.fd{ overflow:hidden; height:40px; margin-top:30px; background:#919191;}
+.fd-nav { width:940px; margin:0 auto; margin-top:15px;}
+.fd-nav li{ height:12px; color:#c2c2c2; padding:0 8px; border-right:1px solid #c2c2c2;}

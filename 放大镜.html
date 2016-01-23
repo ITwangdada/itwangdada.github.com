@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{padding: 0; margin: 0;}
+			div{position: relative;overflow: hidden;  float: left; margin: 10px; width:310px; height: 310px; }
+			#div1 { background: url(img/m1.jpg) no-repeat;}
+			#s1 { display: none; width: 100px; height: 100px; background: yellow; opacity: 0.5; position: absolute; left: 0; top: 0;}
+			#div2 {display: none;} 
+			img{ position: absolute; left:0;top: 0;}
+		</style>
+		<script src="js/jquery-1.7.2.js"></script>
+		<script>
+			$(function(){
+				var oSpan=$('#s1');
+				var oDiv2=$('#div2');
+				var oDiv1=$('#div1');
+				var oImg=$('#img');
+				var maxLeft=0;
+				var maxTop=0;
+				var imgMaxLeft=0;
+				var imgMaxTop=0;
+				oDiv1.mouseover(function(){
+					oSpan.show();
+					oDiv2.show();
+					maxLeft=oDiv1.width()-oSpan.width();
+					maxTop=oDiv1.height()-oSpan.height();
+					imgMaxLeft=oImg.width()-oDiv2.width();
+					imgMaxTop=oImg.height()-oDiv2.height();
+				});
+				oDiv1.mouseout(function(){
+					oSpan.hide();
+					oDiv2.hide();
+				});
+				oDiv1.mousemove(function(ev){
+					var top=ev.clientY-oDiv1.offset().top-oSpan.width()/2;
+					var left=ev.clientX-oDiv1.offset().left-oSpan.height()/2;
+					if(left < 0){
+						left=0;
+					}else if(left > maxLeft){
+						left=maxLeft;
+					}
+					if(top < 0 ){
+						top=0;
+					}else if(top > maxTop){
+						top=maxTop;
+					}
+					oSpan.css({left:left+'px',top:top+'px'});
+					oImg.css({
+						left:-left/maxLeft*imgMaxLeft+'px',
+						top:-top/maxTop*imgMaxTop+'px'
+					})
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<span id="s1"></span>
+		</div>
+		<div id="div2">
+			<img src="img/b1.jpg"  id="img"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{ padding: 0; margin: 0;}
+			div{ overflow: hidden;}
+			ul{ width: 200px; margin-right: 10px; border: 1px solid saddlebrown; float: left;}
+			li{ margin-bottom: 10px; list-style: none;}
+			#div1{ height: 40px; background: deeppink; display:none;}
+		</style>
+		<script>
+			function rnd(n,m){
+				return Math.floor(Math.random()*(m-n)+n);
+			}
+			window.onload=function(){
+				var aUl=document.getElementsByTagName('ul');
+				var n=0;
+				createLi();
+				window.onscroll=function(){
+					var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+					var client=document.documentElement.clientHeight;
+					var height=document.body.offsetHeight;
+					if( height-100 <= client+scrollTop){
+						createLi();
+					}
+				};l
+				function createLi(){
+					n++;
+					if(n>5)
+					{
+						var oDiv=document.getElementById('div1');
+						oDiv.style.display='block';
+						return;
+					}
+					var arr=[]
+					for(var i=0;i<aUl.length;i++){
+						arr.push(aUl[i]);
+					}			
+					for(var i=0;i<40;i++){
+						var oLi=document.createElement('li');
+						arr.sort(function(u1,u2){
+							return u1.offsetHeight-u2.offsetHeight;
+						})
+						oLi.style.height=rnd(100,300)+'px';
+						oLi.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+						arr[0].appendChild(oLi)
+					}
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+		</div>
+		<div id="div1">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+.hd{ height:34px; border:1px solid #d6d6d6; background:#fbfbfb;}
+.hd_left{ width:108px; height:22px; border:1px solid #ccc; margin-top:5px;}
+.hd_left a{ color:#666; display:block; text-align:center; line-height:22px;}
+.hd_left a:hover{ color:red; text-decoration:none;}
+.hd_right { overflow:hidden;}
+.hd_right li{ margin-top:11px; padding:0 10px; border-right:1px solid #ccc; margin-right:-1px;}
+.hd_right li a{ color:#666;}
+.hd_right li a:hover{ color:red;}
